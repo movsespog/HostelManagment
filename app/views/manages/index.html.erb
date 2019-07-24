@@ -1,0 +1,45 @@
+<html>
+    <head>  
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <meta name="HandheldFriendly" content="true">
+        <title>Project</title>  
+        
+        <link rel="stylesheet" href="master.scss" >
+
+    </head>
+    <body style="background-color: grey">
+        <!--
+        <div class="row " style="background-color:skyblue">
+            <div class="col-11 nav">LOGO</div>
+            <div class="col-1 a"><a href="#">Log Out</a></div>
+            
+        </div>  -->
+        
+        
+        
+       
+    <% if user_signed_in? %>    
+        <div class="row b" >
+            <div class="col-md-4 d a" ><h1>Student Information</h1>
+               <li><%= link_to 'Student Record', index1_path %></li>
+                
+            </div>
+            <div class="col-md-4 d"><h1>Room Information</h1>
+                <li><%= link_to 'Room Record', index2_path %></li>
+            </div>
+           <div class="col-md-4 d"><h1>Student Reviews</h1>
+                <li><%= link_to 'Student Review', index3_path %></li>
+            </div>
+        </div>    
+<%else%>
+  
+   <%= image_tag "hostel.jpg", :class => "style_image" %>
+   
+
+<%end%>
+            
+    </body>        
+</html>
